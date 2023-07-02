@@ -340,11 +340,21 @@ font-weight: normal;
 }
 
 // -----------------
-html.html{
-  margin-top: 0!important;
-}
+// html.html{
+//   margin-top: 32px!important;
+//   @media screen and (min-width:783px){
+//     margin-top: 46px!important;
+//   }
+// }
 
-#wpadminbar{
-  top: auto;
-  bottom: 0;
+// @media (max-width: 1024px){
+// .l-sidebar.is-open.html{
+//   margin-top: 46px;
+// }
+// }
+@media screen and (max-width: 600px){
+#wpadminbar {
+    position: fixed;
+}
+  
 }

@@ -1336,12 +1336,9 @@ body {
   margin-top: 32px;
 }
 
-html.html {
-  margin-top: 0 !important;
-}
-
-#wpadminbar {
-  top: auto;
-  bottom: 0;
+@media screen and (max-width: 600px) {
+  #wpadminbar {
+    position: fixed;
+  }
 }
 /*# sourceMappingURL=style.css.map */
