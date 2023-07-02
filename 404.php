@@ -1,10 +1,15 @@
 <?php get_header(); ?>
 
       <main class="main-area">
+        <div class="l-404-padding">
 
       <p>
         ページがみつかりません。
       </p>
+
+                
+      </div>
+
 
       </main>
     </div>
