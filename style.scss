@@ -1,0 +1,340 @@
+@use "foundation/base";
+@use "foundation/general";
+@use "foundation/color";
+@use "foundation/font";
+@use "foundation/mixin";
+@use "layout/common";
+@use "layout/footer";
+@use "layout/header";
+@use "layout/main";
+@use "layout/sidebar";
+@use "object/component";
+@use "object/project";
+@use "object/utility";
+
+.wp-pagenavi {
+	clear: both;
+	text-align:center;
+  margin-top: 150px;
+  margin-bottom: 64px;
+
+}
+.wp-pagenavi a, .wp-pagenavi span {
+	color: color.$c-text;
+	background-color: #FFFFFF;
+	padding: 8px 15px;
+	margin: 0 2px;
+	white-space: nowrap;
+	-webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
+	text-align: center;
+	text-decoration: none;
+	border: solid 1px color.$c-text;
+}
+.wp-pagenavi a:hover{
+	color: #fff;
+	background-color: color.$c-text;
+    }
+.wp-pagenavi span.current{
+	color: #fff;
+	background-color: color.$c-text;
+    }
+.wp-pagenavi {
+  .pages{
+  border: none;
+  }
+  .previouspostslink{
+    border: none;
+  }
+  .nextpostslink{
+    border: none;
+  }
+}
+
+
+
+
+.p-single-page{
+  .l-single-inner{
+    padding-left: 6.5%;
+    padding-right: 6.5%;
+  }
+  
+  
+  h2{
+    font-size: 36px;
+    font-weight: bold;
+    color: #3C2A10;
+  }
+  
+  h3{
+    font-size: 28px;
+    font-weight: bold;
+    color: #3C2A10;
+  }
+  
+  h4{
+    font-size: 20px;
+    font-weight: bold;
+    color: #3C2A10;
+  }
+  
+  h5{
+    font-size: 20px;
+    font-weight: bold;
+    color: #3C2A10;
+  }
+  
+  h6{
+    font-size: 20px;
+    font-weight: bold;
+    color: #3C2A10;
+  }
+  
+  blockquote{
+    padding: 50px 60px 46px 50px;
+    background-color: #F5F5F5;
+    margin-bottom: 60px;
+  }
+  
+  blockquote p{
+    margin-bottom: 60px;
+  }
+  
+  blockquote cite a{
+    text-decoration: underline;
+    color: #4A6C9B;
+  }
+  
+  .wp-block-image,.image-large{
+    margin-bottom: 60px;
+  }
+  .flex{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  
+    
+  }
+  
+  .flex-reverse{
+    flex-direction: row-reverse;
+    
+  }
+  
+  .flex-image{
+    width: 43%;
+    img{
+      max-width: 100%;
+    }
+  }
+  
+  .flex .flex-text{
+    width: 54%;
+  }
+  
+  }
+  
+  .p-image-center{
+    text-align: center;
+    margin-bottom: 60px;
+  
+  }
+  
+  .p-flex-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+    margin-bottom: 54px;
+  }
+  .p-flex-wrap__image{
+    width: 32%;
+    margin: 4px;
+    @include mixin.mq("pc-down"){
+      width: 40%;
+    }
+    @include mixin.mq("sp-down"){
+      width: 100%;
+    }
+    img{
+      max-width: 100%;
+    }
+  }
+  
+  // ---------------------------------
+  .p-page-fv{
+    height: 500px;
+    background-image: url(../images/shop-top.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-weight: bold;
+    @include mixin.font-size(60);
+    color: #fff;
+    @include mixin.mq("pc-down"){
+      height: 505px;
+    }
+    @include mixin.mq("sp-down"){
+      height: 225px;
+      background-image: url(../images/shop-top.jpg);
+    }
+  }
+  
+  .p-single-page{
+    h2{
+      margin-bottom: 56px;
+    }
+    p{
+      margin-bottom: 60px;
+    }
+    h3{
+      margin-bottom: 56px;
+    }
+    h4{
+      margin-bottom: 56px;
+    }
+    h5{
+      margin-bottom: 56px;
+    }
+    h6{
+      margin-bottom: 56px;
+    }
+  }
+  
+  
+  .p-single-fv__title{
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    transform: translateY(-50%);
+    @include mixin.mq("pc-down"){
+    left: 10%;
+    
+    }
+    @include mixin.mq("sp-down"){
+    left: 7%;
+    @include mixin.font-size(36);
+    }
+  }
+  .page-template-default ol,.p-single-page__order-list{
+    list-style-type: decimal;
+    margin-left: 50px;
+    margin-bottom: 18px;
+  }
+  
+  
+  .page-template-default ul,.p-single__list{
+    margin-left: 30px;
+    margin-bottom: 18px;
+  }
+  
+  .p-single__list-last{
+    margin-bottom: 56px;
+  }
+  
+  
+  
+  .list-second{
+    margin-left: 68px;
+  }
+  
+  
+  .wp-block-code,.p-single-page__code{
+    background-color: #F5F5F5;
+    padding: 50px 60px 50px 50px;
+    margin-bottom: 50px;
+    p{
+      margin-left: 32px;
+      margin-bottom: 0;
+    }
+    p:first-child{
+      margin-left: 0;
+    }
+    p:last-child{
+      margin-left: 0;
+    }
+  }
+  
+  .wp-block-table,.p-single-page__table{
+    width: 100%;
+    margin-bottom: 60px;
+    td:first-child{
+      width: 30%;
+    }
+    td{
+      border: solid 1px #707070;
+      padding: 29px 0 24px 30px;
+    }
+  }
+  
+  .wp-block-button__link,.p-single-page__button{
+    display: block;
+    font-weight: bold;
+    padding: 40px 190px;
+    border: 1px solid #707070;
+    border-radius: 20px;
+    background:linear-gradient(to right, #DED8D3,#F2EDE9);
+    margin-bottom: 60px;
+    color: #3C2A10;
+  }
+  
+  .p-single-page__bold{
+    font-weight: bold;
+  }
+  
+  .l-single-page{
+    padding-top: 60px;
+    padding-bottom: 278px;
+    @include mixin.mq("sp-down"){
+      padding-bottom: 68px;
+    }
+  }
+  // --------------------------
+  .p-single-fv{
+    height: 500px;
+    background-image: url(../images/single-top.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-weight: bold;
+    @include mixin.font-size(60);
+    color: #fff;
+    @include mixin.mq("pc-down"){
+      height: 505px;
+    }
+    @include mixin.mq("sp-down"){
+      height: 225px;
+      background-image: url(../images/single-top.jpg);
+    }
+  }
+.l-sidebar__menu-list .sub-menu a{
+font-weight: normal;
+}
+
+.wp-block-image.size-full.is-resized{
+  img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+}
+
+.l-sidebar .menu-item-object-category{
+  font-weight: bold;
+  @include mixin.font-size(24);
+  margin-top: 48px;
+}
+
+.l-sidebar .menu-item-object-post{
+  @include mixin.font-size(20);
+  margin-top: 20px;
+  margin-left: 18px;
+}
+
+.l-sidebar .sub-menu{
+  margin-top: 32px;
+}
