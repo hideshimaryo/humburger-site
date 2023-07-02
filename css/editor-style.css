@@ -277,6 +277,10 @@ body {
   }
 }
 
+.l-404-padding {
+  padding: 64px 6.5% 6.5% 64px;
+}
+
 .l-sidebar {
   background-color: #F2EDE9;
   width: 19%;
@@ -304,7 +308,6 @@ body {
     background-color: #F2EDE9;
     z-index: 100;
     overflow-y: scroll;
-    height: 100vh;
   }
 }
 .l-sidebar__title {
@@ -1312,5 +1315,29 @@ body {
   height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.l-sidebar .menu-item-object-category {
+  font-weight: bold;
+  font-size: 24px;
+  font-size: 1.5rem;
+  margin-top: 48px;
+}
+
+.l-sidebar .menu-item-object-post {
+  font-size: 20px;
+  font-size: 1.25rem;
+  margin-top: 20px;
+  margin-left: 18px;
+}
+
+.l-sidebar .sub-menu {
+  margin-top: 32px;
+}
+
+@media screen and (max-width: 600px) {
+  #wpadminbar {
+    position: fixed;
+  }
 }
 /*# sourceMappingURL=style.css.map */
