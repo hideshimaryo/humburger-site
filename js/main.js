@@ -4,7 +4,7 @@ $(function(){
 	$('.js-hamburger').on('click', function() {
     $('.l-sidebar').toggleClass('is-open');
     $('.p-hamburger__mask').toggleClass('is-open');
-    $('body').toggleClass('is-open');
+    // $('body').toggleClass('is-open');
     $('.l-sidebar__menu-list').toggleClass('is-open');
   });
 
