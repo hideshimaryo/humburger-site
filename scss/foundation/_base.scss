@@ -4,11 +4,11 @@ body{
   overflow-x: hidden;
 }
 
-body.is-open {
-  @include mixin.mq("pc-down") {
-    position: fixed;
-  }
-}
+// body.is-open {
+//   @include mixin.mq("pc-down") {
+//     position: fixed;
+//   }
+// }
 
 .flex-box{
   display: flex;

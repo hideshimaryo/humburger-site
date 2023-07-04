@@ -22,14 +22,12 @@
 @include mixin.mq("pc-down"){
   .l-sidebar.is-open{
     position: absolute;
-      width: 100%;
       right: 0%;
       width: 367px;
-      height: 100%;
       background-color: color.$c-side_color;
       z-index: 100;
       overflow-y: scroll;
-      // height: 100vh;
+      height: 2355px;
   }
 }
 
@@ -102,6 +100,3 @@
   transform: translate(-50%,-50%) rotate(45deg);
 }
 
-.l-sidebar__menu-list.is-open{
-  height: 100vh;
-}
