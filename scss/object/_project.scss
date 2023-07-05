@@ -224,11 +224,14 @@
 .p-archive-contents{
   padding: 64px 6% 0;
   color: #3c2a10;
+  margin-bottom: 150px;
   @include mixin.mq("pc-down"){
     padding: 39px 5% 0px;
+    margin-bottom: 102px;
   }
   @include mixin.mq("sp-down"){
     padding-top: 32px;
+    margin-bottom: 72px;
   }
 }
 
